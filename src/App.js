@@ -2,6 +2,7 @@ import './App.css';
 import Register from './Components/Register';
 import Login from './Components/Login';
 import OrderInfo from './Components/OrderInfo'
+import OldOrders from './Components/PastOrders'
 import MissingPage from './Components/MissingPage';
 import RequireAuth from './Components/RequireAuth';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
@@ -23,6 +24,7 @@ function App() {
           {/* Protected Route */}
           <Route element={<RequireAuth></RequireAuth>}>
             <Route path='/OrderInfo' element={<OrderInfo />}></Route>
+            <Route path='/PastOrders' element={<OldOrders/>}></Route>
           </Route>
 
 
