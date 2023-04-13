@@ -238,30 +238,7 @@ const OrderInfo = () => {
                       <td className="" key={idList2[i] + 13}>{recordList2[i].props.id}</td>
                     </tr>
                   );
-                  // let delivTime = recordList2[i].props.deliveryTime
-                  // //----------------------------------------
-                  // if (records.length > 0) {
-                  //   for (let i = 0; i < records.length; i++) {
-                  //     console.log("Comparision #1");
-                  //     console.log(records[i].props.children[8].props.children);
-                  //     console.log("Comparision New Record");
-                  //     console.log(delivTime);
-                  //     console.log("#1 is earlier than new Record");
-                  //     console.log(records[i].props.children[8].props.children < delivTime);
-                  //     if(i === 0 && !(records[i].props.children[8].props.children < delivTime)){
-                  //       records.splice(0, 0, record)
-                  //     }else if(i < record.length - 1 && 
-                  //       (records[i].props.children[8].props.children < delivTime && !(records[i + 1].props.children[8].props.children < delivTime))){
-                  //       records.splice(i, 0, record)
-                  //     }else if(i === records.length - 1){
-                  //       records.push(record)
-                  //     }else{
-                  //       console.log("There was an error!")
-                  //     }
-                  //   }
-                  // }
                   managingTimeOrder(records, recordList2[i].props.deliveryTime, temp);
-                  // records.push(temp)
                 }
                 return records;
               })()}
