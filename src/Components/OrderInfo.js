@@ -10,6 +10,8 @@ const OrderInfo = () => {
   const [qtyCW, setQtyCW] = useState(0);
   const [qtySpecial1, setQtySpecial1] = useState(0);
   const [qtySpecial2, setQtySpecial2] = useState(0); //NEW SPECIAL
+  const [applePie, setApplePie] = useState(0); //NEW SPECIAL
+  const [muffin, setMuffin] = useState(0); //NEW SPECIAL
   const [buildingAddress, setBuildingAddress] = useState("");
   const [roomNum, setRoomNum] = useState(0);
   const [deliveryTime, setDeliveryTime] = useState("");
@@ -65,6 +67,8 @@ const OrderInfo = () => {
           qty_cw: recordList2[i].props.qtyCW,
           qty_special1: recordList2[i].props.qtySpecial1,
           qty_special2: recordList2[i].props.qtySpecial2,
+          apple_pie: recordList2[i].props.applePie,
+          muffin: recordList2[i].props.muffin,
           delivery_time: recordList2[i].props.deliveryTime,
           building_address: recordList2[i].props.buildingAddress,
           room_num: recordList2[i].props.roomNum,
@@ -138,6 +142,8 @@ const OrderInfo = () => {
             qtyCW={order[0].qty_cw}
             qtySpecial1={order[0].qty_special1}
             qtySpecial2={order[0].qty_special2}
+            applePie={order[0].apple_pie}
+            muffin={order[0].muffin}
             buildingAddress={order[0].building_address}
             roomNum={order[0].room_num}
             deliveryTime={order[0].delivery_time}
@@ -195,6 +201,8 @@ const OrderInfo = () => {
                 <th className="p-2">CW</th>
                 <th className="p-2">Special1</th>
                 <th className="p-2">Special2</th>
+                <th className="p-2">Apple Pie</th>
+                <th className="p-2">Muffin</th>
                 <th className="p-2">Building</th>
                 <th className="p-2 whitespace-nowrap">Room #</th>
                 <th className="p-2 whitespace-nowrap">Delivery Time</th>
@@ -227,6 +235,8 @@ const OrderInfo = () => {
                       <td className="" key={idList2[i] + 2}>{recordList2[i].props.qtyCW}</td>
                       <td className="" key={idList2[i] + 3}>{recordList2[i].props.qtySpecial1}</td>
                       <td className="" key={idList2[i] + 4}>{recordList2[i].props.qtySpecial2}</td>
+                      <td className="" key={idList2[i] + 4}>{recordList2[i].props.applePie}</td>
+                      <td className="" key={idList2[i] + 4}>{recordList2[i].props.muffin}</td>
                       <td className="" key={idList2[i] + 5}>{recordList2[i].props.buildingAddress}</td>
                       <td className="" key={idList2[i] + 6}>{recordList2[i].props.roomNum}</td>
                       <td className="" key={idList2[i] + 7}>{recordList2[i].props.deliveryTime}</td>
